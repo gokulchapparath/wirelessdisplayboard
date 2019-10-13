@@ -2,9 +2,13 @@ from flask import Flask, render_template, url_for
 
 app= Flask(__name__, static_url_path='/static')
 
+@app.route("/404")
+def master():
+    return render_template('master.html')
+
 @app.route("/")
 @app.route("/home")
-def defpage():
+def home():
     return render_template('home.html',  methods=['GET', 'POST'])    
 
 @app.route("/login")
