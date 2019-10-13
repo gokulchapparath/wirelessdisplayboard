@@ -1,18 +1,11 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, url_for
 
-app= Flask(__name__)
+app= Flask(__name__, static_url_path='/static')
 
 @app.route("/")
+@app.route("/home")
 def defpage():
-    return '''
-    <html>
-    <head>
-    <body>
-    <h1>WELCOME TO WIRELESS NOTICE BOARD<h1>
-    </body>
-    </head>
-    </html>
-    '''
+    return render_template('home.html',  methods=['GET', 'POST'])    
 
 @app.route("/login")
 def login():
@@ -21,9 +14,15 @@ def login():
 @app.route("/registration")
 def registration():
     return render_template('registration.html')
-@app.route("/request")
-def request():
-    return render_template('request.html')
+
+@app.route("/regi")
+def regi():
+    return render_template('regi.html')
+
+@app.route("/add")
+def add():
+    return render_template('add.html')
+
 
 
 if __name__ == '__main__':
