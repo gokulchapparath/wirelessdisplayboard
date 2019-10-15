@@ -1,5 +1,4 @@
-{% extends "master.html" %}
-{% block head %}
+<head>
 <style>
     /* Bootstrap css */
     @import "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css";
@@ -16,10 +15,10 @@
     /* Propeller datetimepicker */
     @import "datetimepicker/css/pmd-datetimepicker.css";
      </style>
-{% endblock head%}
+</head>
 
 
-{% block content %}
+<body>
 <!-- jquery JS -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
@@ -59,13 +58,41 @@
 </script>
 
 <div class="container">
+        <div class="row ">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-expand-sm bg-light navbar-light">
+                        <a class="navbar-brand" href="/">HOME</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#collapsibleNavbar">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Active notices</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="add">Add New Notice</a>
+                                </li>
+                            </ul>
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="requests">Requests</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
     <div class="row">
         <div class="col-sm-12">
             <table class="table">
                 <thead>
                     <tr>
                         <th colspan="2">
-                                <h1 class="display-4">ADD NEW NOTICE</h1></th>
+                                <h1 class="display-4">REQUESTS FOR A NOTICE</h1></th>
 
                     </tr>
 
@@ -186,22 +213,13 @@
                              </div>
                              </div>
                             </tr>
-                                  <tr>
-                                 <td scope="row">
-                               <label for="duration">Duration(in Seconds)</label>
-                                 </td>
-                                 <td>
-                                     <input type="number" name="duration" id="duration" >
-                                 </td>
-                             </tr>
+                                  
                              
                              <tr>
                              <td scoper="row" align="right">
-                                    <button type="button" class="btn btn-info">save</button>
+                                    <button type="button" class="btn btn-info">SEND</button>
                              </td>
-                             <td align="left">
-                                    <button type="button" class="btn btn-danger">Cancel</button>
-                             </td>    
+                                
                              </tr>
                       </div>
                     </td>
@@ -212,4 +230,4 @@
     </div>
 </div>
 
-{% endblock content %}
+</body>
